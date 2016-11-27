@@ -1,0 +1,364 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Learn Coding With Her</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="Nancy Deng">
+    
+    <meta name="description" content="#How to Create Your Blog with GitHub Pages and Hexo@(learnCodingWithHer)[github, markdown, hexo, nodejs, Markdown]GitHub Pages and Hexo is a totally f">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="Learn Coding With Her" title="Learn Coding With Her"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Learn Coding With Her">Learn Coding With Her</a></h1>
+				<h2 class="blog-motto">Code to make a better world; learn to be a better coder</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/11/27/How to Create Your Blog with GitHub Pages and Hexo/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://yoursite.com" title="Nancy Deng">Nancy Deng</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2016-11-27T23:36:37.000Z" itemprop="datePublished">2016-11-27</time>
+    Updated:<time datetime="2016-11-27T23:36:37.000Z" itemprop="dateModified">2016-11-27</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Setup-GitHub-Pages"><span class="toc-number">1.</span> <span class="toc-text">Setup GitHub Pages</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-Git-and-Setup-the-SSH-Key"><span class="toc-number">2.</span> <span class="toc-text">Install Git and Setup the SSH Key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-Hexo"><span class="toc-number">3.</span> <span class="toc-text">Install Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-as-a-local-server"><span class="toc-number">4.</span> <span class="toc-text">Hexo as a local server</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Deployment"><span class="toc-number"></span> <span class="toc-text">Deployment</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Docs-https-hexo-io-docs-deployment-html"><span class="toc-number">1.</span> <span class="toc-text">Docs: https://hexo.io/docs/deployment.html</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ssh-git-github-com-learncodingwithher-learncodingwithher-github-io"><span class="toc-number"></span> <span class="toc-text">ssh://git@github.com/learncodingwithher/learncodingwithher.github.io</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Site"><span class="toc-number"></span> <span class="toc-text">Site</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Extensions"><span class="toc-number"></span> <span class="toc-text">Extensions</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Plugins-https-hexo-io-plugins"><span class="toc-number">1.</span> <span class="toc-text">Plugins: https://hexo.io/plugins/</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Themes-https-hexo-io-themes"><span class="toc-number">2.</span> <span class="toc-text">Themes: https://hexo.io/themes/</span></a></li></ol>
+		</div>
+		
+		<p>#How to Create Your Blog with GitHub Pages and Hexo<br>@(learnCodingWithHer)[github, markdown, hexo, nodejs, Markdown]<br>GitHub Pages and Hexo is a totally free, convenient yet powerful way to build your own blog. GitHub Pages gives the free space to host your blog contents; Hexo provides the blog schemes and designs for you to choose from, enables you to focus on writing the content with Markdown. And after editing a new article, simple Hexo commands help to generate the HTML content and deploy it into your blog. Plus, all your articles are under version control. If you would like to write a blog in a simple way and enjoy using Markdown and GitHub, this is the framework for you.</p>
+<p>Here is a step-by-step guide on how to do this.</p>
+<p>[TOC]</p>
+<h2 id="Setup-GitHub-Pages"><a href="#Setup-GitHub-Pages" class="headerlink" title="Setup GitHub Pages"></a>Setup GitHub Pages</h2><ol>
+<li>Get a <a href="https://github.com/" target="_blank" rel="external">GitHub</a> account. Please note the blog url will be  <a href="http://yourUsername.github.io" target="_blank" rel="external">http://yourUsername.github.io</a>. </li>
+<li>Create a new repository named <strong>yourUsername/yourUsername.github.io</strong>. Go to <a href="https://github.com/new" target="_blank" rel="external">https://github.com/new</a> and create it from there.<blockquote>
+<p>Example: my GitHub account is named <em>learncodingwithher</em> and my repo is <em>learncodingwithher/learncodingwithher.github.io</em>.</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="Install-Git-and-Setup-the-SSH-Key"><a href="#Install-Git-and-Setup-the-SSH-Key" class="headerlink" title="Install Git and Setup the SSH Key"></a>Install Git and Setup the SSH Key</h2><ol>
+<li>Install Git on your computer. On Mac, install it with <strong>Homebrew</strong> with this command in Terminal,<br><code>brew install git</code></li>
+</ol>
+<blockquote>
+<p>Tips: if you do not have Homebrew installed yet – install Xcode from App Store; and then run this command in Terminal to install Homebrew,<br><code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></p>
+</blockquote>
+<ol>
+<li>Config Git,<br><code>git config --global user.name &quot;&lt;your name&gt;&quot;</code><br><code>git config --global user.email &quot;&lt;your email&gt;&quot;</code></li>
+<li>Generate a SSH key for GitHub,<br><code>ls -al ~/.ssh</code><br><code>rm -rf ~/.ssh/id_rsa*</code><br><code>ssh-keygen -t rsa -C &lt;your email&gt;</code><br>press enter at the prompt. Note the email address here is the one associated with the GitHub account. This step creates a SSH key and the public key is stored in <em>~/.ssh/id_rsa.pub</em>.</li>
+<li>Copy the key and add it into your GitHub account,<br><code>cat ~/.ssh/id_rsa.pub</code><br>Go to <a href="https://github.com/settings/ssh" target="_blank" rel="external">https://github.com/settings/ssh</a>, click <strong>New SSH Key</strong> and copy the key over to the account.</li>
+<li>Now you should be able to ssh to GitHub,<br><code>ssh git@github.com</code><br>A message like below confirms that the key is enabled,<blockquote>
+<p>Hi learncodingwithher! You’ve successfully authenticated, but GitHub does not provide shell access.<br>Connection to github.com closed.</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h2><ol>
+<li>Install <strong>Node.js</strong>, which is the JavaScript framework that <strong>Hexo</strong> depends on. Simply install with <strong>Homebrew</strong>,<br><code>brew install node</code><br>And this step also installs <strong>npm</strong>, the Node package manager.<br>Confirm Node.js is installed, if this command prints its version number,<br><code>node -v</code><br><code>npm -v</code></li>
+<li>Install <strong>Hexo</strong> with <strong>npm</strong>, (-g for global)<br><code>npm install hexo -g</code><br>Make sure it is sucessfully installed,<br><code>hexo -v</code><blockquote>
+<p>$ hexo -v<br>hexo-cli: 1.0.2<br>os: Darwin 16.1.0 darwin x64<br>http_parser: 2.5.2<br>node: 4.4.4<br>v8: 4.5.103.35<br>uv: 1.8.0<br>zlib: 1.2.8<br>ares: 1.10.1-DEV<br>icu: 56.1<br>modules: 46<br>openssl: 1.0.2h</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="Hexo-as-a-local-server"><a href="#Hexo-as-a-local-server" class="headerlink" title="Hexo as a local server"></a>Hexo as a local server</h2><ol>
+<li><p>Choose a folder to hold the blog content. There is no need to create it — just let hexo to create and initialize it by this command, (I use my folder path <em>~/Documents/learnCodingWithHer/</em> as an example.)<br><code>hexo init ~/Documents/learnCodingWithHer/</code><br>Take a look at what is configured into this folder,</p>
+<blockquote>
+<p>$ ls -al<br>total 656<br>drwxr-xr-x@ 12 nancy  staff     408 22 Nov 23:16 .<br>drwx——+ 26 nancy  staff     884 22 Nov 00:14 ..<br>-rw-r–r–@  1 nancy  staff    6148 22 Nov 08:30 .DS_Store<br>-rw-r–r–   1 nancy  staff      65 22 Nov 23:16 .npmignore<br>-rw-r–r–   1 nancy  staff    1483 22 Nov 23:16 _config.yml<br>drwxr-xr-x  12 nancy  staff     408 22 Nov 23:17 node_modules<br>-rw-r–r–   1 nancy  staff     443 22 Nov 23:16 package.json<br>drwxr-xr-x   5 nancy  staff     170 22 Nov 23:16 scaffolds<br>drwxr-xr-x   3 nancy  staff     102 22 Nov 23:16 source<br>drwxr-xr-x   3 nancy  staff     102 22 Nov 23:16 themes</p>
+</blockquote>
+</li>
+<li><p>Go to this folder,<br><code>cd ~/Documents/learnCodingWithHer/</code><br>and call npm to install the dependencies that are specified in package.json,<br><code>npm install</code></p>
+</li>
+<li><p>Now we can test with the example blog Hexo provides. Use “Hexo generate” command to prepare the static pages for the example blog,<br><code>hexo g</code><br>And the generated data are in a new folder called “public” and a new json file,</p>
+<blockquote>
+<p>-rw-r–r–   1 nancy  staff   23918 22 Nov 23:21 db.json<br>drwxr-xr-x   8 nancy  staff     272 22 Nov 23:20 public</p>
+</blockquote>
+</li>
+<li><p>And then start a local Hexo server<br><code>hexo s</code></p>
+</li>
+<li>View the blog in your web browser by this link, <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. The Hexo blog displays. Also this provide a good way to view and check the webpages locally before publishing them to the remote servers, such as GitHub Pages.</li>
+</ol>
+<p>##Deploy to GitHub</p>
+<ol>
+<li><p>Config the <strong>Deployment</strong> setting in the blog folder <em>_config.yml</em>,</p>
+<blockquote>
+<h1 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h1><h2 id="Docs-https-hexo-io-docs-deployment-html"><a href="#Docs-https-hexo-io-docs-deployment-html" class="headerlink" title="Docs: https://hexo.io/docs/deployment.html"></a>Docs: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">https://hexo.io/docs/deployment.html</a></h2><h1 id="ssh-git-github-com-learncodingwithher-learncodingwithher-github-io"><a href="#ssh-git-github-com-learncodingwithher-learncodingwithher-github-io" class="headerlink" title="ssh://git@github.com/learncodingwithher/learncodingwithher.github.io"></a>ssh://git@github.com/learncodingwithher/learncodingwithher.github.io</h1><p>deploy:<br> type: git<br> repo: ssh://git@github.com/learncodingwithher/learncodingwithher.github.io<br>branch: master</p>
+</blockquote>
+</li>
+<li><p>Install the Hexo Git deployer package.<br><code>cd ~/Documents/learnCodingWithHer/</code><br><code>npm install hexo-deployer-git --save</code></p>
+</li>
+<li><p>Now Hexo is ready to deploy to GitHub Pages! Run this command to deploy the Hexo example blog to GitHub,<br><code>hexo d</code><br>When this message prints, the deployment is complete.</p>
+<blockquote>
+<p>INFO  Deploy done: git</p>
+</blockquote>
+</li>
+<li><p>And I can visit it with the link, <a href="https://learncodingwithher.github.io/" target="_blank" rel="external">https://learncodingwithher.github.io/</a> !</p>
+</li>
+</ol>
+<p>##Config the Hexo Blog<br>A little bit more configs in the <em>_config.yml</em> file — the blog title, subtitle, description and author,</p>
+<blockquote>
+<h1 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h1><p>title: Learn Coding With Her<br>subtitle: Code to make a better world; learn to be a better coder<br>description: A tech blog on programming, software and tools<br>author: Nancy Deng<br>language:<br>timezone:</p>
+</blockquote>
+<p>##Publish to the Blog</p>
+<p>##Change to Another Hexo Scheme<br>There are many Hexo schemes published on GitHub. Find one you like and clone it to the blog folder. Apply it by changing the <strong>theme</strong> setting in the <em>_config.yml</em> file. For example, I use <strong>pacman</strong> that I find on GitHub.</p>
+<ol>
+<li>Clone it to the blog folder and place it under <em>themes/</em> subfolder,<br><code>cd ~/Documents/learnCodingWithHer/</code><br><code>git clone https://github.com/A-limon/pacman.git themes/pacman</code></li>
+<li><p>Modify the <strong>Theme</strong> setting in the blog folder <em>_config.yml</em> to <strong>pacman</strong>.</p>
+<blockquote>
+<h1 id="Extensions"><a href="#Extensions" class="headerlink" title="Extensions"></a>Extensions</h1><h2 id="Plugins-https-hexo-io-plugins"><a href="#Plugins-https-hexo-io-plugins" class="headerlink" title="Plugins: https://hexo.io/plugins/"></a>Plugins: <a href="https://hexo.io/plugins/" target="_blank" rel="external">https://hexo.io/plugins/</a></h2><h2 id="Themes-https-hexo-io-themes"><a href="#Themes-https-hexo-io-themes" class="headerlink" title="Themes: https://hexo.io/themes/"></a>Themes: <a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a></h2><p>theme: pacman</p>
+</blockquote>
+</li>
+<li><p>If <em>hexo g</em> command is called with the previous theme, it is better to remove <em>public/</em> subfolder first,<br><code>rm -rf ~/Documents/learncodingwithher/public/</code></p>
+</li>
+<li>Regenerate with the new theme,<br><code>hexo g</code></li>
+</ol>
+<blockquote>
+<p>Markdown is a plain text formatting syntax designed to be converted to HTML. Markdown is popularly used as format for readme files, … or in text editors for the quick creation of rich text documents.  - <a href="http://en.wikipedia.org/wiki/Markdown" target="_blank" rel="external">Wikipedia</a></p>
+</blockquote>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://yoursite.com/2016/11/27/How to Create Your Blog with GitHub Pages and Hexo/" data-title="Learn Coding With Her" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/11/22/hello-world/"  title="Hello World">
+ <strong>NEXT:</strong><br/> 
+ <span>Hello World
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Setup-GitHub-Pages"><span class="toc-number">1.</span> <span class="toc-text">Setup GitHub Pages</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-Git-and-Setup-the-SSH-Key"><span class="toc-number">2.</span> <span class="toc-text">Install Git and Setup the SSH Key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-Hexo"><span class="toc-number">3.</span> <span class="toc-text">Install Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-as-a-local-server"><span class="toc-number">4.</span> <span class="toc-text">Hexo as a local server</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Deployment"><span class="toc-number"></span> <span class="toc-text">Deployment</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Docs-https-hexo-io-docs-deployment-html"><span class="toc-number">1.</span> <span class="toc-text">Docs: https://hexo.io/docs/deployment.html</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ssh-git-github-com-learncodingwithher-learncodingwithher-github-io"><span class="toc-number"></span> <span class="toc-text">ssh://git@github.com/learncodingwithher/learncodingwithher.github.io</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Site"><span class="toc-number"></span> <span class="toc-text">Site</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Extensions"><span class="toc-number"></span> <span class="toc-text">Extensions</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Plugins-https-hexo-io-plugins"><span class="toc-number">1.</span> <span class="toc-text">Plugins: https://hexo.io/plugins/</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Themes-https-hexo-io-themes"><span class="toc-number">2.</span> <span class="toc-text">Themes: https://hexo.io/themes/</span></a></li></ol>
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font clearfix">
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
+		
+		<a href="http://yoursite.com" target="_blank" title="Nancy Deng">Nancy Deng</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+  </body>
+</html>
