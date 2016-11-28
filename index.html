@@ -5,31 +5,42 @@
   <meta charset="UTF-8">
   
     <title>Learn Coding With Her</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Nancy Deng">
     
+
+    
     <meta name="description" content="A tech blog on programming, software and tools">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Learn Coding With Her">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Learn Coding With Her">
+<meta property="og:description" content="A tech blog on programming, software and tools">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Learn Coding With Her">
+<meta name="twitter:description" content="A tech blog on programming, software and tools">
+
     
-    
-    
+    <link rel="alternative" href="/atom.xml" title="Learn Coding With Her" type="application/atom+xml">
     
     
     <link rel="icon" href="/img/favicon.ico">
     
     
-    <link rel="apple-touch-icon" href="/img/pacman.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
   <body>
     <header>
-      <div>
+      
+<div>
 		
 			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="Learn Coding With Her" title="Learn Coding With Her"/></a>
+				<a href="/"><img src="/img/logo.png" alt="Learn Coding With Her" title="Learn Coding With Her"/></a>
 			</div>
 			
 			<div id="textlogo">
@@ -40,16 +51,19 @@
 			</a></div>
 			<nav class="animated">
 				<ul>
-					
+					<ul>
+					 
 						<li><a href="/">Home</a></li>
 					
 						<li><a href="/archives">Archives</a></li>
 					
-					<li>
+						<li><a href="/about">About</a></li>
 					
+					<li>
+ 					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:yoursite.com">
 					</form>
 					
@@ -57,24 +71,150 @@
 				</ul>
 			</nav>			
 </div>
-
     </header>
     <div id="container">
       <div id="main">
 
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2016/11/06/How to Create Your Blog with GitHub Pages and Hexo/" title="How to Create Your Blog with GitHub Pages and Hexo" itemprop="url">
-  
-    <h1 itemprop="name">How to Create Your Blog with GitHub Pages and Hexo</h1>
+   
     
-     
-           <p itemprop="description" >GitHub Pages and Hexo is a totally free, convenient yet powerful way to build your own blog. GitHub Pages gives the free space to host your </p>
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/11/06/How to Create Your Blog with GitHub Pages and Hexo/" title="How to Create Your Blog with GitHub Pages and Hexo" itemprop="url">How to Create Your Blog with GitHub Pages and Hexo</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Nancy Deng" target="_blank" itemprop="author">Nancy Deng</a>
+		
+  <p class="article-time">
+    <time datetime="2016-11-06T15:34:21.000Z" itemprop="datePublished"> Published 2016-11-06</time>
+    
+  </p>
+</header>
+    <div class="article-content">
         
-    
-    <time datetime="2016-11-06T15:34:21.000Z" itemprop="datePublished">2016-11-06</time>
-  </a>
-</section>
+        <p>GitHub Pages and Hexo is a totally free, convenient yet powerful way to build your own blog. GitHub Pages gives the free space to host your blog contents; Hexo provides the blog schemes and designs for you to choose from, enables you to focus on writing the content with Markdown. And after editing a new article, simple Hexo commands help to generate the HTML content and deploy it into your blog. Plus, all your articles are under version control. If you would like to write a blog in a simple way and enjoy using Markdown and GitHub, this is the framework for you.</p>
+<p>Here is a step-by-step guide on how to do this.<br><img src="/2016/11/06/How%20to%20Create%20Your%20Blog%20with%20GitHub%20Pages%20and%20Hexo/github_pages.png" alt="GitHub Pages" title="GitHub Pages"></p>
+<h2 id="Setup-GitHub-Pages"><a href="#Setup-GitHub-Pages" class="headerlink" title="Setup GitHub Pages"></a>Setup GitHub Pages</h2><ol>
+<li>Get a <a href="https://github.com/" target="_blank" rel="external">GitHub</a> account. Please note the blog url will be  <a href="http://yourUsername.github.io" target="_blank" rel="external">http://yourUsername.github.io</a>. </li>
+<li>Create a new repository named <strong>yourUsername/yourUsername.github.io</strong>. Go to <a href="https://github.com/new" target="_blank" rel="external">https://github.com/new</a> and create it from there.<blockquote>
+<p>Example: my GitHub account is named <em>learncodingwithher</em> and my repo is <em>learncodingwithher/learncodingwithher.github.io</em>.</p>
+</blockquote>
+</li>
+</ol>
+<img src="/2016/11/06/How%20to%20Create%20Your%20Blog%20with%20GitHub%20Pages%20and%20Hexo/new_repo.png" alt="Create the new repository" title="Create the new repository">
+<h2 id="Install-Git-and-Setup-the-SSH-Key"><a href="#Install-Git-and-Setup-the-SSH-Key" class="headerlink" title="Install Git and Setup the SSH Key"></a>Install Git and Setup the SSH Key</h2><ol>
+<li>Install Git on your computer. On Mac, install it with <strong>Homebrew</strong> with this command in Terminal,<br><code>brew install git</code></li>
+</ol>
+<blockquote>
+<p>Tips: if you do not have Homebrew installed yet – install Xcode from App Store; and then run this command in Terminal to install Homebrew,<br><code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></p>
+</blockquote>
+<ol>
+<li>Config Git,<br><code>git config --global user.name &quot;&lt;your name&gt;&quot;</code><br><code>git config --global user.email &quot;&lt;your email&gt;&quot;</code></li>
+<li>Generate a SSH key for GitHub,<br><code>ls -al ~/.ssh</code><br><code>rm -rf ~/.ssh/id_rsa*</code><br><code>ssh-keygen -t rsa -C &lt;your email&gt;</code><br>press enter at the prompt. Note the email address here is the one associated with the GitHub account. This step creates a SSH key and the public key is stored in <em>~/.ssh/id_rsa.pub</em>.</li>
+<li>Copy the key and add it into your GitHub account,<br><code>cat ~/.ssh/id_rsa.pub</code><br>Go to <a href="https://github.com/settings/ssh" target="_blank" rel="external">https://github.com/settings/ssh</a>, click <strong>New SSH Key</strong> and copy the key over to the account.</li>
+<li>Now you should be able to ssh to GitHub,<br><code>ssh git@github.com</code><br>A message like below confirms that the key is enabled,<blockquote>
+<p>Hi learncodingwithher! You’ve successfully authenticated, but GitHub does not provide shell access.<br>Connection to github.com closed.</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h2><ol>
+<li>Install <strong>Node.js</strong>, which is the JavaScript framework that <strong>Hexo</strong> depends on. Simply install with <strong>Homebrew</strong>,<br><code>brew install node</code><br>And this step also installs <strong>npm</strong>, the Node package manager.<br>Confirm Node.js is installed, if this command prints its version number,<br><code>node -v</code><br><code>npm -v</code></li>
+<li>Install <strong>Hexo</strong> with <strong>npm</strong>, (-g for global)<br><code>npm install hexo -g</code><br>Make sure it is sucessfully installed,<br><code>hexo -v</code><blockquote>
+<p>$ hexo -v<br>hexo-cli: 1.0.2<br>os: Darwin 16.1.0 darwin x64<br>http_parser: 2.5.2<br>node: 4.4.4<br>v8: 4.5.103.35<br>uv: 1.8.0<br>zlib: 1.2.8<br>ares: 1.10.1-DEV<br>icu: 56.1<br>modules: 46<br>openssl: 1.0.2h</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="Hexo-as-a-local-server"><a href="#Hexo-as-a-local-server" class="headerlink" title="Hexo as a local server"></a>Hexo as a local server</h2><ol>
+<li><p>Choose a folder to hold the blog content. There is no need to create it — just let hexo to create and initialize it by this command, (I use my folder path <em>~/Documents/learnCodingWithHer/</em> as an example.)<br><code>hexo init ~/Documents/learnCodingWithHer/</code><br>Take a look at what is configured into this folder,</p>
+<blockquote>
+<p>$ ls -al<br>total 656<br>drwxr-xr-x@ 12 nancy  staff     408 22 Nov 23:16 .<br>drwx——+ 26 nancy  staff     884 22 Nov 00:14 ..<br>-rw-r–r–@  1 nancy  staff    6148 22 Nov 08:30 .DS_Store<br>-rw-r–r–   1 nancy  staff      65 22 Nov 23:16 .npmignore<br>-rw-r–r–   1 nancy  staff    1483 22 Nov 23:16 _config.yml<br>drwxr-xr-x  12 nancy  staff     408 22 Nov 23:17 node_modules<br>-rw-r–r–   1 nancy  staff     443 22 Nov 23:16 package.json<br>drwxr-xr-x   5 nancy  staff     170 22 Nov 23:16 scaffolds<br>drwxr-xr-x   3 nancy  staff     102 22 Nov 23:16 source<br>drwxr-xr-x   3 nancy  staff     102 22 Nov 23:16 themes</p>
+</blockquote>
+</li>
+<li><p>Go to this folder,<br><code>cd ~/Documents/learnCodingWithHer/</code><br>and call npm to install the dependencies that are specified in package.json,<br><code>npm install</code></p>
+</li>
+<li><p>Now we can test with the example blog Hexo provides. Use “Hexo generate” command to prepare the static pages for the example blog,<br><code>hexo g</code><br>And the generated data are in a new folder called “public” and a new json file,</p>
+<blockquote>
+<p>-rw-r–r–   1 nancy  staff   23918 22 Nov 23:21 db.json<br>drwxr-xr-x   8 nancy  staff     272 22 Nov 23:20 public</p>
+</blockquote>
+</li>
+<li><p>And then start a local Hexo server<br><code>hexo s</code></p>
+</li>
+<li>View the blog in your web browser by this link, <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. The Hexo blog displays. Also this provide a good way to view and check the webpages locally before publishing them to the remote servers, such as GitHub Pages.</li>
+</ol>
+<h2 id="Deploy-to-GitHub"><a href="#Deploy-to-GitHub" class="headerlink" title="Deploy to GitHub"></a>Deploy to GitHub</h2><ol>
+<li><p>Config the <strong>Deployment</strong> setting in the blog folder <em>_config.yml</em>,</p>
+<blockquote>
+<p># Deployment<br>## Docs: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">https://hexo.io/docs/deployment.html</a><br># ssh://git@github.com/learncodingwithher/learncodingwithher.github.io<br>deploy:<br> type: git<br> repo: ssh://git@github.com/learncodingwithher/learncodingwithher.github.io<br>branch: master</p>
+</blockquote>
+</li>
+<li><p>Install the Hexo Git deployer package.<br><code>cd ~/Documents/learnCodingWithHer/</code><br><code>npm install hexo-deployer-git --save</code></p>
+</li>
+<li><p>Now Hexo is ready to deploy to GitHub Pages! Run this command to deploy the Hexo example blog to GitHub,<br><code>hexo d</code><br>When this message prints, the deployment is complete.</p>
+<blockquote>
+<p>INFO  Deploy done: git</p>
+</blockquote>
+</li>
+<li><p>And I can visit it with the link, <a href="https://learncodingwithher.github.io/" target="_blank" rel="external">https://learncodingwithher.github.io/</a> !</p>
+</li>
+</ol>
+<h2 id="Config-the-Hexo-Blog"><a href="#Config-the-Hexo-Blog" class="headerlink" title="Config the Hexo Blog"></a>Config the Hexo Blog</h2><p>A little bit more configs in the <em>_config.yml</em> file — the blog title, subtitle, description and author,</p>
+<blockquote>
+<p># Site<br>title: Learn Coding With Her<br>subtitle: Code to make a better world; learn to be a better coder<br>description: A tech blog on programming, software and tools<br>author: Nancy Deng<br>language:<br>timezone:</p>
+</blockquote>
+<h2 id="Publish-to-the-Blog"><a href="#Publish-to-the-Blog" class="headerlink" title="Publish to the Blog"></a>Publish to the Blog</h2><p>To publish a new post, type this command with the title of the new post,<br><code>hexo new &quot;title&quot;</code><br>Hexo will create a new markdown file under <em>source/_post/</em>. Use your favourite editor and start to write in Markdown.<br>After writing is done, generate it with “<strong>hexo g</strong>“, review with “<strong>hexo s</strong>“ and deploy it to GitHub with “<strong>hexo d</strong>“.</p>
+<h2 id="Change-to-Another-Hexo-Scheme"><a href="#Change-to-Another-Hexo-Scheme" class="headerlink" title="Change to Another Hexo Scheme"></a>Change to Another Hexo Scheme</h2><p>There are many Hexo schemes published on GitHub. Find one you like and clone it to the blog folder. Apply it by changing the <strong>theme</strong> setting in the <em>_config.yml</em> file. For example, I use <strong>pacman</strong> that I find on GitHub.</p>
+<ol>
+<li>Clone it to the blog folder and place it under <em>themes/</em> subfolder,<br><code>cd ~/Documents/learnCodingWithHer/</code><br><code>git clone https://github.com/A-limon/pacman.git themes/pacman</code></li>
+<li><p>Modify the <strong>Theme</strong> setting in the blog folder <em>_config.yml</em> to <strong>pacman</strong>.</p>
+<blockquote>
+<p># Extensions<br>## Plugins: <a href="https://hexo.io/plugins/" target="_blank" rel="external">https://hexo.io/plugins/</a><br>## Themes: <a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a><br>theme: pacman</p>
+</blockquote>
+</li>
+<li><p>If <em>hexo g</em> command is called with the previous theme, it is better to remove <em>public/</em> subfolder first,<br><code>rm -rf ~/Documents/learncodingwithher/public/</code></p>
+</li>
+<li>Regenerate with the new theme,<br><code>hexo g</code></li>
+</ol>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Post/">Post</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/github/">github</a><a href="/tags/markdown/">markdown</a><a href="/tags/hexo/">hexo</a><a href="/tags/nodejs/">nodejs</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
 
 
 </div>
@@ -85,11 +225,16 @@
 <aside class="clearfix">
 
   
+
+
+  
 <div class="categorieslist">
 	<p class="asidetitle">Categories</p>
 		<ul>
 		
+		  
 			<li><a href="/categories/Post/" title="Post">Post<sup>1</sup></a></li>
+		  
 		
 		</ul>
 </div>
@@ -100,21 +245,57 @@
 	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
-			<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
+			
+				<li><a href="/tags/github/" title="github">github<sup>1</sup></a></li>
+			
 		
-			<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+				<li><a href="/tags/markdown/" title="markdown">markdown<sup>1</sup></a></li>
+			
 		
-			<li><a href="/tags/markdown/" title="markdown">markdown<sup>1</sup></a></li>
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
 		
-			<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>1</sup></a></li>
+			
+				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>1</sup></a></li>
+			
 		
 		</ul>
 </div>
 
 
-  <div class="rsspart">
-	<a href="null" target="_blank" title="rss">RSS</a>
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+    </ul>
 </div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">Weibo</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=b3593ceb&dpc=1"></iframe>
+</div>
+
 
 </aside>
 </div>
@@ -127,21 +308,42 @@
 	</div>
 	
 	
-	<div class="social-font clearfix">
+	<section class="info">
+		<p> Hello ,I&#39;m Larry Page in Google. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/2176287895" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
 		
 		
 		
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
+			
 		
-		<a href="http://yoursite.com" target="_blank" title="Nancy Deng">Nancy Deng</a>
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="Nancy Deng">Nancy Deng</a>
+		
 		
 		</p>
 </div>
 </footer>
-    <script src="/js/jquery-2.1.0.min.js"></script>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
 <script type="text/javascript">
 $(document).ready(function(){ 
   $('.navbar').click(function(){
@@ -159,18 +361,6 @@ $(document).ready(function(){
       a = $('#asidepart'),
       c = $('.closeaside'),
       o = $('.openaside');
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else
-    {
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
-        
-    }
-  });
   c.click(function(){
     a.addClass('fadeOut').css('display', 'none');
     o.css('display', 'block').addClass('fadeIn');
@@ -184,6 +374,18 @@ $(document).ready(function(){
   $(window).scroll(function(){
     o.css("top",Math.max(80,260-$(this).scrollTop()));
   });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
 });
 </script>
 
@@ -192,6 +394,69 @@ $(document).ready(function(){
 
 
 
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
 
   </body>
  </html>
